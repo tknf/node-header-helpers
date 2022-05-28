@@ -1,0 +1,41 @@
+{
+  "name": "@tknf/node-header-helpers",
+  "version": "0.1.0",
+  "description": "A generic, framework-independent string helper for headers",
+  "author": "Tasuku Kuribayashi <kuribayashi@tknf.net>",
+  "repository": {
+    "url": "https://github.com/tknf/node-header-helpers"
+  },
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://github.com/tknf/node-header-helpers",
+  "keywords": [
+    "server",
+    "header",
+    "node"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "yarn build --preserveWatchOutput -w",
+    "build": "tsc -p .",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tknf/eslint-config-typescript": "^1.0.6",
+    "@tknf/prettier-config": "^1.0.6",
+    "eslint": "^8.16.0",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.2"
+  },
+  "prettier": "@tknf/prettier-config"
+}
